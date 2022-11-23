@@ -43,8 +43,8 @@ def main():
 	time.sleep(3)
 	print('\nRangaistuksesi on...')
 	
-	rangaistus_minuutit = int(np.floor(g(minuutit)))
-	rangaistus_sekunnit = int(np.ceil((g(minuutit) % 1) * 60))
+	rangaistus_minuutit = np.floor(g(minuutit), dtype=int)
+	rangaistus_sekunnit = np.ceil((g(minuutit) % 1) * 60, dtype=int)
 	
 	r = random.randint(2, 6)
 	
