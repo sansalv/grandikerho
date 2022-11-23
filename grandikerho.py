@@ -23,17 +23,17 @@ def main():
 	print(f'\nOlit {int(minuutit//60)} h {int(np.floor(minuutit%60))} min {round(minuutit%1*60)} s myöhässä...')
 	time.sleep(2)
 	
-	f = lambda t: np.log(t)/np.log(5)+0.05*t
+	f = lambda t: np.log(1+t)/np.log(5)+0.05*t
 	R = lambda t: 0.5*(np.sin(15*t)**2+1)
 	g = lambda t: f(t)*R(t)
 	
 	max_minuutit = int(np.floor(f(minuutit)))
-	max_sekunnit = np.ceil((f(minuutit) % 1) * 60)
+	max_sekunnit = int(np.ceil((f(minuutit) % 1) * 60))
 	
 	min_minuutit = int(np.floor(f(minuutit)/2))
-	min_sekunnit = np.ceil(((f(minuutit)/2) % 1) * 60)
+	min_sekunnit = int(np.ceil(((f(minuutit)/2) % 1) * 60))
 
-	
+
 	maksimi = f'{max_minuutit} min {max_sekunnit} s'
 	minimi  = f'{min_minuutit} min {min_sekunnit} s'
 	
@@ -43,10 +43,10 @@ def main():
 	time.sleep(3)
 	print('\nRangaistuksesi on...')
 	
-	rangaistus_minuutit = np.floor(g(minuutit), dtype=int)
-	rangaistus_sekunnit = np.ceil((g(minuutit) % 1) * 60, dtype=int)
+	rangaistus_minuutit = int(np.floor(g(minuutit)))
+	rangaistus_sekunnit = int(np.ceil((g(minuutit) % 1) * 60))
 	
-	r = random.randint(2, 6)
+	r = random.randint(2, 8)
 	
 	for i in range(r):
 		time.sleep(2)
@@ -55,8 +55,8 @@ def main():
 	
 	print(f'{rangaistus_minuutit} min ja {rangaistus_sekunnit} s ! Tsemppiä.')
 	
-	kello_tunti = str(int(9+(2*minuutit+17)//60))
-	kello_minuutti = str(round((2*minuutit+17)%60))
+	kello_tunti = str(int(9+(2*minuutit+17+2)//60))
+	kello_minuutti = str(round((2*minuutit+17+2)%60))
 	if int(kello_minuutti) < 10:
 		kello_minuutti = '0' + kello_minuutti
 	
