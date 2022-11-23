@@ -12,10 +12,12 @@ $g(t) = f(t)*R(t)$ <br>
 Ota yhteyttä Eliakseen, Johannekseen, Santeriin tai Onniin
 
 ## Roadmap
-.exe tiedostoksi, käyttöliittymä
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- koodin kattava kommentointi
+- teoria selitetty auki readme tiedostoon
+- .exe tiedostoksi
+- käyttöliittymä
+- automaattinen datan tallennus lokaalisti
+- automaattinen datan tallennus pilveen verkkoyhteydellä
 
 ## License
 Open source
