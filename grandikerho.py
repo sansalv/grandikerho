@@ -28,10 +28,10 @@ def main():
 	g = lambda t: f(t)*R(t)
 	
 	max_minuutit = int(np.floor(f(minuutit)))
-	max_sekunnit = round((f(minuutit) % 1) * 60)
+	max_sekunnit = np.ceil((f(minuutit) % 1) * 60)
 	
 	min_minuutit = int(np.floor(f(minuutit)/2))
-	min_sekunnit = round(((f(minuutit)/2) % 1) * 60)
+	min_sekunnit = np.ceil(((f(minuutit)/2) % 1) * 60)
 	
 	
 	maksimi = f'{max_minuutit} min {max_sekunnit} s'
