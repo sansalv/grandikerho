@@ -10,10 +10,7 @@ $g(t) = f(t)*R(t)$ <br>
 
 
 ## Support
-emerve@utu.fi, <br>
-sansalv@utu.fi, <br>
-johannes.t.rajala@utu.fi, <br>
-oesnar@utu.fi <br>
+Ota yhteyttä Eliakseen, Johannekseen, Santeriin tai Onniin
 
 ## Roadmap
 .exe tiedostoksi, käyttöliittymä
