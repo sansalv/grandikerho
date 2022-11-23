@@ -32,12 +32,12 @@ def main():
 	
 	min_minuutit = int(np.floor(f(minuutit)/2))
 	min_sekunnit = np.ceil(((f(minuutit)/2) % 1) * 60)
-	
+
 	
 	maksimi = f'{max_minuutit} min {max_sekunnit} s'
 	minimi  = f'{min_minuutit} min {min_sekunnit} s'
 	
-	print(f'\nTästä koituu rangaistus välillä...')
+	print('\nTästä koituu rangaistus välillä...')
 	time.sleep(3)
 	print( f'\n{minimi} ... {maksimi}' )
 	time.sleep(3)
