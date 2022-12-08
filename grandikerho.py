@@ -20,14 +20,14 @@ def main():
 
 	# Vain Linuxille
 	#system('clear')
-
+	
 	# Tulostetaan aloitustekstit
 	time.sleep(1)
 	print('Tervetuloa Grandikerhoon!')
 	time.sleep(2)
 	print('\nmyöhässä...')
 	time.sleep(2)
-
+	
 	# Muuttuja aika on myöhästymisaika
 	aika = str(input('\nMikä oli saapumisaikasi RTT:lle sekunnin tarkkuudella? (esim. 9.23.41)\n'))
 	aika = [int(i) for i in aika.split('.')]
@@ -62,7 +62,7 @@ def main():
 	rangaistus_sekunnit = int(np.ceil((g(minuutit) % 1) * 60))
 	
 	# Tulostetaan satunnainen määrä (0-8) pisteitä jännityksen kasaamiseksi
-	r = random.randint(2, 8)
+	r = random.randint(0, 8)
 	for i in range(r):
 		time.sleep(2)
 		print('...')
@@ -78,17 +78,22 @@ def main():
 	if int(kello_minuutti) < 10:
 		kello_minuutti = '0' + kello_minuutti
 	kellonaika = f'{kello_tunti}.{kello_minuutti}'
-	print(f'\nTämä tulee olla suoritettuna klo {kellonaika} mennessä.\n')
+	print(f'\nTämä tulee olla suoritettuna klo {kellonaika} mennessä.')
 	
-	# Vain Windowsille
-	print(input('Otatko nyt opiksi?'))
-	
+	# Tulostaa kuinka huono tuuri kävi
+	tau = lambda r: 1-(2/np.pi)*np.arcsin(np.sqrt(2*r-1))
+	print(f'\nTuurisi oli huonoimman {round(tau(R(minuutit))*100, 2)} %:n joukossa.')
+
 	# Plotataan g(t)-funktio rangaistuksen ympäriltä (+- 30 sek)
 	t = np.arange(max(0,minuutit-0.5), minuutit+0.5, 0.001)
 	y = g(t)
 	plt.plot(t,y)
 	plt.plot([minuutit], [g(minuutit)], 'ro')
+	time.sleep(3)
 	plt.show()
+
+	# Vain Windowsille
+	print(input('\nOtatko nyt opiksi?\n'))
 
 if __name__ == '_main_':
     main()
