@@ -81,8 +81,8 @@ def main():
 	print(f'\nTämä tulee olla suoritettuna klo {kellonaika} mennessä.')
 	
 	# Tulostaa kuinka huono tuuri kävi
-	tau = lambda r: 1-(2/np.pi)*np.arcsin(np.sqrt(2*r-1))
-	print(f'\nTuurisi oli huonoimman {round(tau(R(minuutit))*100, 2)} %:n joukossa.')
+	tau = lambda r: (2/np.pi)*np.arcsin(np.sqrt(2*r-1))
+	print(f'\nTuurisi oli huonoimman {round((1-tau(R(minuutit)))*100, 2)} %:n joukossa.')
 
 	# Plotataan g(t)-funktio rangaistuksen ympäriltä (+- 30 sek)
 	t = np.arange(max(0,minuutit-0.5), minuutit+0.5, 0.001)
