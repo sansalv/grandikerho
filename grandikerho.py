@@ -6,7 +6,7 @@ import random
 
 """
 Grandikerhon lankutusajan laskuri, jonka myöhästyneet jäsenet joutuvat suorittamaan.
-
+ 
 Windowsin käyttäjät:
 Kommentoi pois "Vain Linuxille" osiot eli:
 system('clear') komento alussa
