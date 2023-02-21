@@ -1,25 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import time
-from os import system
+import os
 import random
 
 """
 Grandikerhon lankutusajan laskuri, jonka myöhästyneet jäsenet joutuvat suorittamaan.
- 
-Windowsin käyttäjät:
-Kommentoi pois "Vain Linuxille" osiot eli:
-system('clear') komento alussa
-
-Linuxin käyttäjät:
-Kommentoi pois "Vain Windowsille" osiot eli:
-print(input('Otatko nyt opiksi?')) komento lopussa
 """
 
 def main():
 
-	# Vain Linuxille
-	#system('clear')
+	# Tyhjennä terminaali
+	os.system('cls' if os.name == 'nt' else 'clear')
 	
 	# Tulostetaan aloitustekstit
 	time.sleep(1)
@@ -92,7 +84,6 @@ def main():
 	time.sleep(3)
 	plt.show()
 
-	# Vain Windowsille
 	print(input('\nOtatko nyt opiksi?\n'))
 
 if __name__ == '_main_':
