@@ -11,7 +11,7 @@ Grandikerhon lankutusajan laskuri, jonka myöhästyneet jäsenet joutuvat suorit
 def main():
 
 	# Tyhjennä terminaali
-	os.system("cls" if os.name == "nt" else "clear")
+	os.system('cls' if os.name == 'nt' else 'clear')
 	
 	# Tulostetaan aloitustekstit
 	time.sleep(1)
