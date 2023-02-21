@@ -1,7 +1,7 @@
-# Grandikerhon rankaisija
+# Grandikerhon rankaisijalaskuri
 
 ## Description
-Tämä koodi kertoo myöhästyneelle sanktion suuruuden.
+Tämä koodi laskee myöhästyneelle sanktion $g(t)$ suuruuden.
 
 $f(t) = \log_5(1+t)+0.05t$ <br>
 $R(t) = 0.5(\sin(15t)^2+1)$<br>
